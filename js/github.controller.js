@@ -7,7 +7,6 @@ export default class Controller{
 	
 	//
 	init(){
-		console.log('init');
 		this.view.DOMElems.searchUser.addEventListener('keyup', this.handler.bind(this));
 	}
 
@@ -23,7 +22,7 @@ export default class Controller{
 						console.log('error');
 					} else {
 						// show profile
-						console.log(data);
+						this.view.showProfile(data.profile);
 					}
 				});
 		} else {
