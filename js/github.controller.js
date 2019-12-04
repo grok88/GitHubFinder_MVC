@@ -26,6 +26,8 @@ export default class Controller{
 						console.log(data);
 					}
 				});
+		} else {
+			// clear profile
 		}
 	}
 }
