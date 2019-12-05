@@ -20,13 +20,17 @@ export default class Controller{
 					if (data.profile.message === 'Not Found'){
 						//show alert
 						console.log('error');
+						this.view.showAlert('User not found', 'alert alert-danger');
 					} else {
 						// show profile
 						this.view.showProfile(data.profile);
+						this.view.showRepos(data.repos);
+						console.log(data.repos);
 					}
 				});
 		} else {
 			// clear profile
+			this.view.clearProfile();
 		}
 	}
 }
